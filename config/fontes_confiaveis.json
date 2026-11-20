@@ -1,0 +1,44 @@
+{
+    "governo": [
+        "portaldogoverno.gov.mz",
+        "presidente.gov.mz",
+        "parlamento.mz",
+        "minec.gov.mz",
+        "misau.gov.mz",
+        "mef.gov.mz",
+        "mint.gov.mz",
+        "magricultura.gov.mz",
+        "transportes.gov.mz",
+        "meic.gov.mz"
+    ],
+    "media_publicos": [
+        "tvm.co.mz",
+        "rm.co.mz",
+        "jornalnoticias.co.mz",
+        "domingo.co.mz",
+        "noticias.co.mz"
+    ],
+    "media_privados": [
+        "opais.co.mz",
+        "canalmoz.co.mz",
+        "moz24h.co.mz",
+        "verdade.co.mz",
+        "carta.co.mz",
+        "mznews.co.mz"
+    ],
+    "institutos": [
+        "ine.gov.mz",
+        "bancomoc.mz",
+        "uem.mz",
+        "up.ac.mz",
+        "isctem.ac.mz",
+        "ciedima.uem.mz",
+        "iip.co.mz"
+    ],
+    "turismo": [
+        "inatur.gov.mz",
+        "mozambique.co.mz",
+        "visitmozambique.net",
+        "mozambiquetourism.co.mz"
+    ]
+}

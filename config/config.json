@@ -1,0 +1,31 @@
+{
+    "modo_padrao": "hibrido",
+    "cache_tempo": 3600,
+    "max_resultados": 5,
+    "idioma": "pt",
+    "versao": "3.0",
+    "data_atualizacao": "2026-04-12",
+    "timeout_busca": 10,
+    "max_tentativas": 3,
+    "anti_alucinacao": {
+        "exigir_fontes": true,
+        "bloquear_respostas_sem_fonte": true,
+        "tempo_maximo_busca": 10,
+        "maximo_tentativas": 3,
+        "validar_numeros": true,
+        "validar_datas": true
+    },
+    "prioridade_fontes": [
+        "ine.gov.mz",
+        "bancomoc.mz",
+        "portaldogoverno.gov.mz",
+        "misau.gov.mz",
+        "mined.gov.mz"
+    ],
+    "interface": {
+        "tema": "claro",
+        "tamanho_fonte": 10,
+        "largura_janela": 700,
+        "altura_janela": 750
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>MozAssist Pro - Chatbot Moçambique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="chat-card">
+        <div class="card-header">
+            <div class="logo-area">
+                <div class="logo-icon">🇲🇿</div>
+                <div>
+                    <h1>MozAssist Pro</h1>
+                    <p>Informações oficiais de Moçambique</p>
+                </div>
+            </div>
+            <div class="status-badge">
+                <span class="dot"></span>
+                <span>Online</span>
+            </div>
+        </div>
+        
+        <div class="chat-area" id="chatArea">
+            <div class="messages-container" id="messagesContainer">
+                <div class="welcome-card">
+                    <div class="welcome-icon">🇲🇿</div>
+                    <h3>Olá! Como posso ajudar?</h3>
+                    <p>Assistente especializado em Moçambique com fontes oficiais</p>
+                    <div class="features">
+                        <span class="feature">🏛️ Governo</span>
+                        <span class="feature">📊 INE</span>
+                        <span class="feature">💰 Banco de Moçambique</span>
+                        <span class="feature">🔍 Google Search</span>
+                    </div>
+                    <div class="example-chips">
+                        <button class="chip" data-question="Qual é a capital de Moçambique?">🇲🇿 Capital</button>
+                        <button class="chip" data-question="Quem é o presidente de Moçambique?">👨‍💼 Presidente</button>
+                        <button class="chip" data-question="Quais são as províncias de Moçambique?">🗺️ Províncias</button>
+                        <button class="chip" data-question="Qual é a moeda de Moçambique?">💰 Moeda</button>
+                        <button class="chip" data-question="Últimas notícias de Moçambique">📰 Notícias</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <div class="input-wrapper">
+                <textarea id="messageInput" placeholder="Digite sua pergunta sobre Moçambique..." rows="1"></textarea>
+                <button id="sendBtn" class="send-btn">📤</button>
+            </div>
+            <div class="input-footer">
+                <span>✏️ Enter para enviar • Shift+Enter para nova linha</span>
+                <button id="modeToggle" class="mode-toggle">🌐 Alternar Modo</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

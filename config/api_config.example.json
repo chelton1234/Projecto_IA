@@ -1,0 +1,9 @@
+{
+    "api_escolhida": "gemini",
+    "gemini": {
+        "api_key": "COLOQUE_AQUI_A_SUA_API_KEY",
+        "modelo": "gemini-2.5-flash-lite"
+    },
+    "usar_ia_quando_nao_encontrar": true,
+    "modo_offline": false
+}

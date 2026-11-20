@@ -1,0 +1,78 @@
+{
+    "sobre_mocambique": {
+        "nome_oficial": "República de Moçambique",
+        "capital": "Maputo",
+        "lingua_oficial": "Português",
+        "moeda": "Metical (MZN)",
+        "populacao": "± 33 milhões (2024)",
+        "area": "801.590 km²",
+        "presidente": "Daniel Chapo (2025-presente)",
+        "independencia": "25 de junho de 1975",
+        "gentilico": "Moçambicano(a)",
+        "fuso_horario": "UTC+2",
+        "governo": {
+            "presidente": "Daniel Chapo",
+            "primeiro_ministro": "Maria Benvinda Levy",
+            "ministro_defesa": "Cristóvão Artur Chume",
+            "ministro_interior": "Pascoal Ronda",
+            "ministro_negocios_estrangeiros": "Verónica Macamo"
+        }
+    },
+    "provincias": [
+        {"nome": "Maputo Cidade", "capital": "Maputo", "area": "300 km²"},
+        {"nome": "Maputo Província", "capital": "Matola", "area": "22.693 km²"},
+        {"nome": "Gaza", "capital": "Xai-Xai", "area": "75.709 km²"},
+        {"nome": "Inhambane", "capital": "Inhambane", "area": "68.615 km²"},
+        {"nome": "Manica", "capital": "Chimoio", "area": "61.661 km²"},
+        {"nome": "Sofala", "capital": "Beira", "area": "68.018 km²"},
+        {"nome": "Tete", "capital": "Tete", "area": "100.724 km²"},
+        {"nome": "Zambézia", "capital": "Quelimane", "area": "105.008 km²"},
+        {"nome": "Nampula", "capital": "Nampula", "area": "81.606 km²"},
+        {"nome": "Niassa", "capital": "Lichinga", "area": "129.055 km²"},
+        {"nome": "Cabo Delgado", "capital": "Pemba", "area": "82.625 km²"}
+    ],
+    "cultura": {
+        "grupos_etnicos": ["Makhuwa", "Tsonga", "Lomwe", "Sena", "Shona", "Ndau", "Chopi", "Swahili"],
+        "musica_tradicional": ["Marrabenta", "Pandza", "Timbila", "Chigubo"],
+        "instrumentos": ["Timbila", "Mbira", "Djembe", "Xipendana"],
+        "gastronomia": ["Matapa", "Xima", "Peixe grelhado", "Piri-piri", "Camarao", "Caril de amendoim"],
+        "bebidas_tipicas": ["Cajú", "Tipo Tinto", "Laurentina", "2M"],
+        "arte": ["Escultura em madeira", "Mucapata", "Capulana", "Cestaria"],
+        "festas_tradicionais": ["Nyau", "Tufo", "Lobolo", "Cerimónia do Chicualacuala"]
+    },
+    "economia": {
+        "principais_setores": ["Agricultura", "Mineração", "Turismo", "Energia", "Indústria"],
+        "principais_produtos": ["Cajú", "Algodão", "Açúcar", "Gás natural", "Carvão", "Titânio", "Madeira"],
+        "pib_2024": "± 20 mil milhões USD",
+        "principais_parceiros": ["África do Sul", "China", "Índia", "Portugal", "EUA"],
+        "recursos_naturais": ["Gás natural", "Carvão", "Grafite", "Rubis", "Madeira", "Energia hidroelétrica"]
+    },
+    "turismo": {
+        "praias": ["Ponta do Ouro", "Tofo", "Vilanculos", "Bazaruto", "Quirimbas", "Pemba", "Inhaca"],
+        "parques_nacionais": ["Gorongosa", "Maputo", "Bazaruto", "Quirimbas", "Limpopo", "Zinave", "Banhine"],
+        "patrimonio_historico": ["Ilha de Moçambique", "Fortaleza de Maputo", "Catedral da Beira", "Estaçao CFM"],
+        "cidades_historicas": ["Ilha de Moçambique", "Maputo", "Inhambane", "Quelimane"]
+    },
+    "geografia": {
+        "rios_principais": ["Zambeze", "Limpopo", "Save", "Rovuma", "Lúrio"],
+        "lagos": ["Lago Niassa", "Lago Chiuta", "Lago Amaramba"],
+        "montanhas": ["Monte Binga", "Monte Namuli", "Serra da Gorongosa"],
+        "clima": "Tropical com duas estações: chuvosa (out-nov) e seca (abr-set)"
+    },
+    "governo": {
+        "presidente": "Daniel Chapo",
+        "primeiro_ministro": "Maria Benvinda Levy",
+        "ministro_defesa": "Cristóvão Artur Chume",
+        "ministro_interior": "Pascoal Ronda",
+        "ministro_negocios_estrangeiros": "Verónica Macamo",
+        "ministro_financas": "Carla Louveira",
+        "ministro_educacao": "Jorge Ferrão"
+    },
+    "girias_mocambicanas": {
+        "catu": "Expressão moçambicana que significa 'coisa boa', 'fixe', 'legal' ou 'muito bom'",
+        "maningue": "Significa 'muito' ou 'demasiado'",
+        "camarada": "Amigo, companheiro",
+        "faz favor": "Por favor",
+        "estamos juntos": "Estamos de acordo, combinado"
+    }
+}
