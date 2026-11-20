@@ -5,13 +5,19 @@ import json
 import os
 from datetime import datetime
 
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
 class GerenciadorConteudo:
     """Gerencia a base de conhecimento local com informações de Moçambique"""
     
     def __init__(self):
         self.caminho_base = "dados/conhecimento_mocambique.json"
         self.base_conhecimento = self.carregar_base()
-        
+        self._vetorizador = None
+        self._matriz = None
+        self._documentos = []
+
     def carregar_base(self):
         """Carrega a base de conhecimento de Moçambique"""
         if os.path.exists(self.caminho_base):
@@ -102,6 +108,39 @@ class GerenciadorConteudo:
         with open(self.caminho_base, 'w', encoding='utf-8') as f:
             json.dump(self.base_conhecimento, f, ensure_ascii=False, indent=2)
     
+    def _construir_corpus(self):
+        documentos = []
+
+        def percorrer(chave, valor):
+            rotulo = chave.replace("_", " ")
+            if isinstance(valor, dict):
+                for subchave, subvalor in valor.items():
+                    percorrer(subchave, subvalor)
+            elif isinstance(valor, list):
+                documentos.append((f"{rotulo} mocambique", f"{rotulo}: {', '.join(map(str, valor))}"))
+            else:
+                documentos.append((f"{rotulo} mocambique", f"{rotulo}: {valor}"))
+
+        for chave, valor in self.base_conhecimento.items():
+            percorrer(chave, valor)
+        return documentos
+
+    def preparar_busca_semantica(self):
+        if self._vetorizador is not None:
+            return
+        self._documentos = self._construir_corpus()
+        self._vetorizador = TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), sublinear_tf=True)
+        self._matriz = self._vetorizador.fit_transform([doc[0] for doc in self._documentos])
+
+    def buscar_por_similaridade(self, pergunta, limiar=0.25):
+        self.preparar_busca_semantica()
+        vetor = self._vetorizador.transform([pergunta.lower()])
+        pontuacoes = cosine_similarity(vetor, self._matriz)[0]
+        indice = pontuacoes.argmax()
+        if pontuacoes[indice] < limiar:
+            return None
+        return self._documentos[indice][1]
+
     def buscar_local(self, pergunta):
         """Busca na base de conhecimento local"""
         pergunta_lower = pergunta.lower()
@@ -171,8 +210,8 @@ class GerenciadorConteudo:
         if "universidade" in pergunta_lower or "faculdade" in pergunta_lower:
             universidades = self.base_conhecimento['educacao']['universidades']
             return f"As principais universidades são: {', '.join(universidades)}."
-        
-        return None
+
+        return self.buscar_por_similaridade(pergunta)
     
     def obter_todos_topicos(self):
         """Retorna lista de todos os tópicos disponíveis"""

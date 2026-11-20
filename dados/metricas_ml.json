@@ -1,0 +1,79 @@
+{
+  "acuracia": 0.7821,
+  "f1_macro": 0.7751,
+  "relatorio": {
+    "economia": {
+      "precision": 0.625,
+      "recall": 0.5,
+      "f1-score": 0.5555555555555556,
+      "support": 10.0
+    },
+    "educacao": {
+      "precision": 0.8,
+      "recall": 0.8888888888888888,
+      "f1-score": 0.8421052631578947,
+      "support": 9.0
+    },
+    "geral": {
+      "precision": 0.6923076923076923,
+      "recall": 0.9,
+      "f1-score": 0.782608695652174,
+      "support": 10.0
+    },
+    "governo": {
+      "precision": 0.7,
+      "recall": 0.7,
+      "f1-score": 0.7,
+      "support": 10.0
+    },
+    "parlamento": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "populacao": {
+      "precision": 0.75,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.7058823529411765,
+      "support": 9.0
+    },
+    "saude": {
+      "precision": 0.8571428571428571,
+      "recall": 0.6,
+      "f1-score": 0.7058823529411765,
+      "support": 10.0
+    },
+    "turismo": {
+      "precision": 0.8333333333333334,
+      "recall": 1.0,
+      "f1-score": 0.9090909090909091,
+      "support": 10.0
+    },
+    "accuracy": 0.782051282051282,
+    "macro avg": {
+      "precision": 0.7822229853479854,
+      "recall": 0.7819444444444444,
+      "f1-score": 0.7751406411673608,
+      "support": 78.0
+    },
+    "weighted avg": {
+      "precision": 0.7824081901004978,
+      "recall": 0.782051282051282,
+      "f1-score": 0.7751700471447409,
+      "support": 78.0
+    }
+  },
+  "relatorio_texto": "              precision    recall  f1-score   support\n\n    economia       0.62      0.50      0.56        10\n    educacao       0.80      0.89      0.84         9\n       geral       0.69      0.90      0.78        10\n     governo       0.70      0.70      0.70        10\n  parlamento       1.00      1.00      1.00        10\n   populacao       0.75      0.67      0.71         9\n       saude       0.86      0.60      0.71        10\n     turismo       0.83      1.00      0.91        10\n\n    accuracy                           0.78        78\n   macro avg       0.78      0.78      0.78        78\nweighted avg       0.78      0.78      0.78        78\n",
+  "total_exemplos": 312,
+  "categorias": [
+    "economia",
+    "educacao",
+    "geral",
+    "governo",
+    "parlamento",
+    "populacao",
+    "saude",
+    "turismo"
+  ]
+}

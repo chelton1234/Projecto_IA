@@ -164,6 +164,13 @@ class ResponderMocambique:
         else:
             ia_status = "Indisponível (modo local)"
 
+        metricas_ml = self.buscador_inteligente.classificador_ml.obter_metricas()
+        info_ml = {
+            "acuracia": metricas_ml.get("acuracia"),
+            "f1_macro": metricas_ml.get("f1_macro"),
+            "exemplos": metricas_ml.get("total_exemplos", 0)
+        }
+
         return {
             "modo_busca": self.modo_busca,
             "topicos_locais": topicos_locais,
@@ -171,6 +178,7 @@ class ResponderMocambique:
             "fontes_configuradas": fontes_configuradas,
             "categorias": len(self.buscador_inteligente.SITES_POR_CATEGORIA),
             "ia_status": ia_status,
+            "ml": info_ml,
             "filtro": stats_filtro
         }
     

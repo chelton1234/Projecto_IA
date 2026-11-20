@@ -4,6 +4,8 @@
 Chatbot inteligente que fornece informações precisas e confiáveis sobre Moçambique, utilizando fontes oficiais, pesquisa em tempo real e IA (Google Gemini).
 
 ## Funcionalidades
+- **Machine Learning**: classificador de intenção (TF-IDF + SVM calibrado) treinado com 312 perguntas rotuladas em 8 categorias
+- Recuperação por similaridade semântica (TF-IDF + cosine) sobre a base de conhecimento local
 - Respostas em tempo real via Google Search + Gemini
 - Busca em sites oficiais (.gov.mz, INE, Banco de Moçambique)
 - Base local com fatos imutáveis (capital, províncias, moeda, etc.)
@@ -33,9 +35,28 @@ Versão gráfica:
 python3 main.py
 ```
 
+## Machine Learning
+O classificador prevê a categoria da pergunta e direcciona a busca para as fontes oficiais adequadas.
+
+```bash
+python3 treinar_modelo.py
+```
+
+Resultados da validação (25% dos dados, estratificado):
+
+| Métrica | Valor |
+| --- | --- |
+| Acurácia | 78,21% |
+| F1-macro | 77,51% |
+| Exemplos rotulados | 312 |
+| Categorias | 8 |
+
+O modelo é guardado em `dados/modelos/` (ignorado pelo Git) e é treinado automaticamente na primeira execução se não existir.
+
 ## Testes
 ```bash
 python3 testes/test_responder.py
+python3 testes/test_ml.py
 ```
 
 ## Fontes Utilizadas
@@ -51,7 +72,7 @@ app.py              Servidor web Flask
 main.py             Interface gráfica Tkinter
 core/               Agentes, buscadores e filtro de contexto
 config/             Configurações (a API key não é versionada)
-dados/              Base de conhecimento local
+dados/              Base de conhecimento, dataset rotulado e métricas ML
 static/, templates/ Interface web
 testes/             Testes automatizados
 ```

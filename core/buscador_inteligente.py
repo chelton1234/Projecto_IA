@@ -9,6 +9,8 @@ from googlesearch import search
 import json
 import os
 
+from core.classificador_ml import ClassificadorIntencao
+
 class BuscadorInteligente:
     """Buscador que procura a resposta exata nos sites oficiais"""
     
@@ -58,11 +60,17 @@ class BuscadorInteligente:
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         })
         self.cache = {}
-    
+        self.classificador_ml = ClassificadorIntencao()
+
     def identificar_categoria(self, pergunta):
         """Identifica a categoria da pergunta para direcionar a busca"""
+        previsao = self.classificador_ml.predizer(pergunta, limiar=0.45)
+        if previsao and previsao["categoria"] in self.SITES_POR_CATEGORIA:
+            print(f"🤖 Categoria prevista por ML: {previsao['categoria']} ({previsao['confianca']:.0%})")
+            return previsao["categoria"]
+
         pergunta_lower = pergunta.lower()
-        
+
         categorias = {
             "parlamento": ["deputado", "deputados", "parlamento", "assembleia", "assembleia da república"],
             "saude": ["médico", "médicos", "hospital", "doença", "saúde", "malária", "enfermeiro", "clinica", "tratamento", "vacina"],
